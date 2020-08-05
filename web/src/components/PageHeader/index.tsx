@@ -5,10 +5,11 @@ import logoImg from '../../assets/images/logo.svg';
 import './styles.css'
 
 interface Props{
-    title: string
+    title: string,
+    description?: string,
 }
 
-const PageHeader: React.FC<Props> = ({title,children}) => (
+const PageHeader: React.FC<Props> = ({title,children, description}) => (
     <header className = 'page-header'>
         <div className="top-bar-container">
             <Link to = '/'>
@@ -19,6 +20,8 @@ const PageHeader: React.FC<Props> = ({title,children}) => (
 
         <div className="header-content">
         <strong>{title}</strong>
+        
+        {description && <p>{description}</p>}
 
         {children}
         </div>
