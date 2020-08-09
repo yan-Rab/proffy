@@ -80,7 +80,6 @@
 
 .total-connections{
     font-size: 1.6rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,6 +132,7 @@
 
     .total-connections{
         grid-area: total;
-        justify-self: end;
+        justify-content: center;
+    
     }
 }
